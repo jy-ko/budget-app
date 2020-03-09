@@ -2,6 +2,7 @@ class BudgetsController < ApplicationController
     before_action :set_budget, only: [:edit, :update, :destroy]
     def index
         @budgets = Budget.all
+        @transactions = Transaction.all
     end
 
     def new
