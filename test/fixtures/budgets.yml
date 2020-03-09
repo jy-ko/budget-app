@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period: MyString
+  category: MyString
+  budgeted_value: 1.5
+  actual_value: 1.5
+
+two:
+  period: MyString
+  category: MyString
+  budgeted_value: 1.5
+  actual_value: 1.5
