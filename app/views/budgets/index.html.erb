@@ -1,5 +1,6 @@
-<h1>Budgets index page</h1>
+<h1>Budgets</h1>
 
+<%= link_to 'Create new budget', new_budget_path %>
 
 <table>
     <tr>
@@ -11,10 +12,12 @@
 
     <% @budgets.each do |budget| %>
         <tr>
-            <th><%= budget.category.category_name%></th>
+            <th><%= budget.category.category_name %></th>
             <th><%= budget.budgeted_value%></th>
             <%# <th><%= actual_value %></th>
             <%# <th>budget.budgeted_value - budget.transaction.actual_value</th> %>
+            <th><%= link_to 'Edit', edit_budget_path(budget) %></th>
+            <th><%= link_to 'Delete', budget_path(budget), method: :delete %></th>
         </tr>
     <% end %>
 </table>
