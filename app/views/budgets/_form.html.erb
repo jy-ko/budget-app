@@ -1,5 +1,12 @@
 <%= simple_form_for @budget do |f| %>
   <%= f.input :budgeted_value %>
-  <%= f.select :category_id, Category.all.collect { |c| [ c.category_name, c.id ] }, include_blank: true%>
+  <%= f.select :category_id, Category.all.collect { |c| [ c.category_name, c.id ] }, include_blank: true %>
+  <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+    <%= f.input(:period_id, 
+      class: "form-control datetimepicker-input", data: {target:"#datetimepicker"}) %>
+    <div class="input-group-append" data-target="#datetimepicker" data-toggle="datetimepicker">
+      <div class="input-group-text"><span class="fas fa-calendar-alt"></span></div>
+    </div>
+  </div>
   <%= f.button :submit %>
 <% end %>
