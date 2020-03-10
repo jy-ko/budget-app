@@ -1,5 +1,8 @@
-<ul class="nav">
-  <%= link_to 'Home', root_path, class: 'nav-link' %>
-  <%= link_to 'Budgets', budgets_path, class: 'nav-link' %>
-  <%= link_to 'My Page', edit_user_registration_path(current_user), class: 'nav-link' %>
-</ul>
+<header class="nav">
+  <%= link_to 'BudgetApp', root_path, class: 'logo' %>
+  <ul >
+    <li><%= link_to 'Budgets', budgets_path, class: 'link link-theme link-arrow' %></li>
+    <li><%= link_to 'Reports', '#', class: 'link link-theme link-arrow' %></li>
+    <li><%= link_to 'My Page', edit_user_registration_path(current_user), class: 'link link-theme link-arrow' %></li>
+  </ul>
+</header>
