@@ -1,5 +1,2 @@
 <h1>Home page</h1>
-<p>click here to see your budgets</p>
-<% @users.each do |user| %>
-    <p>Welcome, <%= user.email %></p>
-<% end %>
+<p>Welcome, <%= current_user.email %></p>
