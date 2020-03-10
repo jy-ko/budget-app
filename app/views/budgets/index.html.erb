@@ -2,6 +2,7 @@
 
 <%= link_to 'Create new budget', new_budget_path %>
 
+<%= link_to 'Create a new category ', new_category_path %>
 <table>
     <tr>
         <th>Category</th>
@@ -18,8 +19,8 @@
                 <%= transaction.actual_value %>
                 <% end %>
             </th>
-            <th><%= budget.budgeted_value %></th>
-            <th><%= link_to 'Delete', budget_path(budget), method: :delete %></th>
+            <th>...</th>
+            <th><%= link_to '❌', budget_path(budget), method: :delete %></th>
         </tr>
     <% end %>
 </table>

@@ -12,9 +12,7 @@ class BudgetsController < ApplicationController
     def create
         @budget = Budget.new(budget_params)
         @budget.user_id = current_user.id
-        @budget.period_id = 1
-        @budget.category_id = 1
-
+        @budget.period_id
         if @budget.save
             redirect_to budgets_path
         else
@@ -46,7 +44,7 @@ class BudgetsController < ApplicationController
     end
 
     def budget_params
-        params.require(:budget).permit(:budgeted_value)
+        params.require(:budget).permit(:budgeted_value, :category_id)
     end
         
 end
