@@ -12,7 +12,6 @@ class BudgetsController < ApplicationController
     def create
         @budget = Budget.new(budget_params)
         @budget.user_id = current_user.id
-        @budget.period_id
         if @budget.save
             redirect_to budgets_path
         else
