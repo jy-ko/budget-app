@@ -1,5 +1,8 @@
 <%= simple_form_for @budget do |f| %>
   <%= f.input :budgeted_value %>
   <%= f.select :category_id, Category.all.collect { |c| [ c.category_name, c.id ] }, include_blank: true%>
+  <div class="form-group">   
+    <%= f.input :period, class: "form-control datetimepicker-input"%>
+  </div>
   <%= f.button :submit %>
 <% end %>

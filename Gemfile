@@ -30,6 +30,10 @@ gem 'devise'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'simple_form'
+gem 'jquery-rails'
+gem 'momentjs-rails'
+gem 'bootstrap4-datetime-picker-rails'
+gem 'jquery'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
