@@ -17,6 +17,12 @@
  @import 'https://fonts.googleapis.com/css?family=Montserrat';
 * {
   font-family: Montserrat;
+  a {
+    color: black;
+  }
+  a:hover {
+    color: black;
+  }
 }
 
  body {
@@ -30,4 +36,12 @@
  .container {
    padding: 0 20px;
    margin: 0 auto
+ }
+
+ a:hover {
+   text-decoration: none;
+ }
+
+ .submit-button {
+   padding: 0;
  }
