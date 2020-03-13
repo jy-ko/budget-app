@@ -22,6 +22,11 @@ class CategoriesController < ApplicationController
         redirect_to budgets_path
     end
 
+    # def self.empty?
+    #     @categories = Category.all
+    #     if @categories.empty?
+    #     end
+    # end
     private 
 
     def category_params 

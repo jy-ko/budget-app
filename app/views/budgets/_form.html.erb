@@ -1,5 +1,11 @@
 <%= simple_form_for @budget do |f| %>
   <%= f.input :budgeted_value %>
-  <%= f.select :category_id, Category.all.collect { |c| [ c.category_name, c.id ] }, include_blank: true%>
+  <% unless @categories.empty? %>
+     <%= f.select :category_id, Category.all.collect { |c| [ c.category_name, c.id ] }, include_blank: true %>
+  <% end %>
+  <% if current_page?(new_budget_path) %> 
+    <%= link_to 'Add a category', new_category_path %>
+  <% end %>
+  <%= f.input :period %>
   <%= f.button :submit %>
 <% end %>
