@@ -1,26 +1,38 @@
 <h1>Budgets</h1>
 
-<%= link_to 'Create new budget', new_budget_path %>
-
-<%= link_to 'Create a new category ', new_category_path %>
 <table>
     <tr>
         <th>Category</th>
         <th>Budgeted</th>
         <th>Actual</th>
         <th>Available</th>
+        <th></th>
     </tr>
 
     <% @budgets.each do |budget| %>
         <tr>
-            <th><%= budget.category.category_name %></th>
-            <th><%= link_to budget.budgeted_value, edit_budget_path(budget) %></th>
-            <th><% @transactions.where(budget_id: budget.id).each do |transaction| %>
-                <%= transaction.actual_value %>
+            <td><%= budget.category.category_name %></td>
+            <td><%= link_to budget.budgeted_value, edit_budget_path(budget) %></td>
+            <td>
+            <% if budget.actual_value %>
+                <%= link_to budget.actual_value, edit_budget_path(budget) %>
+            <% else %>
+                <%= link_to '+', edit_budget_path(budget) %>
+            <% end %>
+            </td>
+            <% if budget.available(budget)>= 0 %>
+                <td class="positive"><%= budget.available(budget) %></td>
+            <% else %>
+                <td class="negative"><%= budget.available(budget) %></td>
+            <% end %>
+            <td><%= link_to budget_path(budget), method: :delete do %>
+                    <i class="fas fa-trash-alt"></i>
                 <% end %>
-            </th>
-            <th>...</th>
-            <th><%= link_to '❌', budget_path(budget), method: :delete %></th>
+            </td>
         </tr>
     <% end %>
 </table>
+
+
+<%= link_to 'New Budget', new_budget_path %>
+<%= link_to 'New Category', new_category_path %>

@@ -1,7 +1,7 @@
 class BudgetsController < ApplicationController
     before_action :set_budget, only: [:edit, :update, :destroy]
     def index
-        @budgets = Budget.all
+        @budgets = Budget.all.sort_by { |b| b.created_at }
         @transactions = Transaction.all
     end
 
@@ -45,7 +45,7 @@ class BudgetsController < ApplicationController
     end
 
     def budget_params
-        params.require(:budget).permit(:budgeted_value, :category_id)
+        params.require(:budget).permit(:budgeted_value, :period, :actual_value, :category_id)
     end
         
 end

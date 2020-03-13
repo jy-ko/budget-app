@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+// navbar
 header {
     margin-top: 16px;
     a {
@@ -91,4 +91,38 @@ header {
   
   .link-theme:before {
     background: #9BC36A
+  }
+
+
+// table
+
+  table {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){background-color: #f2f2f2;}
+  tr:hover {background-color: rgb(238, 235, 235);} 
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #BDD89E;
+    color: white;
+  }
+
+  .positive {
+    color: green;
+  }
+
+  .negative {
+    color: red;
   }

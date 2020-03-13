@@ -6,6 +6,7 @@
   <% if current_page?(new_budget_path) %> 
     <%= link_to 'Add a category', new_category_path %>
   <% end %>
+  <%= f.input :actual_value %>
   <%= f.input :period %>
   <%= f.button :submit %>
 <% end %>
