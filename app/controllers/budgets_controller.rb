@@ -7,6 +7,7 @@ class BudgetsController < ApplicationController
 
     def new
         @budget = Budget.new
+        @categories = Category.all
     end
 
     def create
@@ -20,6 +21,7 @@ class BudgetsController < ApplicationController
     end
 
     def edit
+        @categories = Category.all
     end
 
     def update
