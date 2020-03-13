@@ -32,12 +32,6 @@ ActiveRecord::Schema.define(version: 2020_03_11_055508) do
     t.string "category_name"
   end
 
-  create_table "periods", force: :cascade do |t|
-    t.datetime "month"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "transactions", force: :cascade do |t|
     t.float "actual_value"
     t.datetime "created_at", null: false
