@@ -15,22 +15,27 @@
  */
  @import "tempusdominus-bootstrap-4.css";
  @import 'https://fonts.googleapis.com/css?family=Montserrat';
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 * {
-  font-family: Montserrat;
+  font-family: 'Ubuntu', sans-serif;
   a {
-    color: black;
+    color: #dde8f0;
   }
   a:hover {
-    color: black;
+    color: #dde8f0;
   }
 }
 
  body {
-    background: rgb(255,255,255);
-    background: linear-gradient(120deg, rgba(255,255,255,1) 30%, rgba(154,195,106,1) 70%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+  background: #004581;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #dde8f0;
+ }
+
+ h1 {
+   color: #dde8f0;
  }
 
  .container {
@@ -45,3 +50,7 @@
  .submit-button {
    padding: 0;
  }
+
+a.link.link-theme.link-arrow {
+  color: #dde8f0;
+}
