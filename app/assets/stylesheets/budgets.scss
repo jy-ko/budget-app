@@ -6,7 +6,7 @@
 header {
     margin-top: 16px;
     a {
-        color: black;
+        color: #dde8f0;
     }
  }
  ul {
@@ -16,16 +16,20 @@ header {
         list-style: none;
         padding-left: 16px;
     }
+      li:hover {
+        color: #dde8f0;
+      }
  }
 
 .logo {
     font-size: large;
     padding-bottom: 2px;
+    color: #dde8f0;
 }
 
 .logo:hover {
     text-decoration: none;
-    color: black;
+    color: #dde8f0;
 }
 
 .link-arrow:after {
@@ -58,14 +62,13 @@ header {
     border: none;
     padding-bottom: 2px;
     text-transform: uppercase;
-    font-family: Montserrat, helvetica, arial, sans-serif;
     font-weight: 700
   }
   
   .link:active,
   .link:focus,
   .link:hover {
-    outline: 0
+    outline: 0;
   }
   
   .link:before {
@@ -90,7 +93,7 @@ header {
   }
   
   .link-theme:before {
-    background: #9BC36A
+    background: #018abd;
   }
 
 
@@ -104,19 +107,16 @@ header {
   th, td {
     padding: 15px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 0.7px solid #dde8f0;
     padding: 8px;
   }
-
-  tr:nth-child(even){background-color: #f2f2f2;}
-  tr:hover {background-color: rgb(238, 235, 235);} 
 
   th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #BDD89E;
-    color: white;
+    background-color: #018abd;
+    color: #dde8f0;
   }
 
   .positive {
